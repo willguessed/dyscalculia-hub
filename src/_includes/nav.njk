@@ -4,7 +4,7 @@
         <ul class="nav-list">
             {% for section in site.sections %}
             <li class="nav-item">
-                <a href="/{{ section.id }}/" class="nav-link">
+                <a href="{{ ('/' ~ section.id ~ '/') | url }}" class="nav-link">
                     <span class="nav-icon">{{ section.icon }}</span>
                     <div class="nav-content">
                         <span class="nav-label">{{ section.title }}</span>
@@ -19,7 +19,7 @@
             <h3>Quick Links</h3>
             <ul class="quick-links">
                 <li><a href="#" id="policy-viewer-link">📄 View Policy Documents</a></li>
-                <li><a href="/submit/">➕ Submit Content</a></li>
+                <li><a href="{{ '/submit/' | url }}">➕ Submit Content</a></li>
             </ul>
         </div>
         </div>

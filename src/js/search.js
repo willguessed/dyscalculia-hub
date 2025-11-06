@@ -18,7 +18,8 @@
     
     // Load search index
     try {
-      const response = await fetch('/search-index.json');
+      const indexUrl = window.__SEARCH_INDEX_URL || '/search-index.json';
+      const response = await fetch(indexUrl);
       searchData = await response.json();
       
       // Build Lunr index
@@ -80,19 +81,44 @@
       }
       
       // Get full document data for results
-      const resultDocs = results.slice(0, 10).map(result => {
-        return searchData.find(doc => doc.url === result.ref);
-      });
+      const resultDocs = results
+        .slice(0, 10)
+        .map(result => searchData.find(doc => doc.url === result.ref))
+        .filter(Boolean);
       
       // Render results
+      const sectionLabels = {
+        legal: 'Legal & Policy Framework',
+        knowledge: 'Knowledge Base',
+        assessment: 'Assessment',
+        interventions: 'Interventions',
+        caseStudies: 'Case Studies',
+        resources: 'Resources',
+        feedback: 'Feedback',
+        changelog: 'Change Log',
+        help: 'Help & FAQs'
+      };
+
+      const prefix = (window.__SITE_PREFIX || '/').replace(/\/$/, '');
       searchResults.innerHTML = resultDocs.map(doc => {
         const excerpt = getExcerpt(doc.content, query);
+        const sectionLabel = sectionLabels[doc.section] || doc.section;
+        let docUrl = doc.url || '#';
+        if (!/^https?:\/\//i.test(docUrl)) {
+          if (prefix && docUrl.startsWith(prefix)) {
+            docUrl = docUrl;
+          } else if (docUrl.startsWith('/')) {
+            docUrl = `${prefix}${docUrl}`;
+          } else {
+            docUrl = `${prefix}/${docUrl}`;
+          }
+        }
         return `
-          <a href="${doc.url}" class="search-result-item">
+          <a href="${docUrl}" class="search-result-item">
             <div class="search-result-title">${highlightText(doc.title, query)}</div>
             <div class="search-result-excerpt">${highlightText(excerpt, query)}</div>
             <div class="search-result-meta">
-              <span class="search-result-section">${doc.section}</span>
+              <span class="search-result-section">${sectionLabel}</span>
               ${doc.category ? `<span class="search-result-category">${doc.category}</span>` : ''}
             </div>
           </a>

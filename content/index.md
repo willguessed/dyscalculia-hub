@@ -62,55 +62,55 @@ This repository serves educators, SENCOs, leadership teams, parents, and governo
 
 <div class="section-grid">
 
-<a href="/legal/" class="section-card">
+<a href="{{ '/legal/' | url }}" class="section-card">
 <span class="section-card-icon">⚖️</span>
 <h3>Legal & Policy Framework</h3>
 <p>Statutory requirements, DfE guidance, and legal obligations for dyscalculia provision.</p>
 </a>
 
-<a href="/knowledge/" class="section-card">
+<a href="{{ '/knowledge/' | url }}" class="section-card">
 <span class="section-card-icon">🧠</span>
 <h3>Dyscalculia Knowledge Base</h3>
 <p>Research, definitions, neuroscience, and characteristics of dyscalculia.</p>
 </a>
 
-<a href="/assessment/" class="section-card">
+<a href="{{ '/assessment/' | url }}" class="section-card">
 <span class="section-card-icon">📋</span>
 <h3>Assessment Procedures</h3>
 <p>Three-tier framework for identification and diagnostic assessment.</p>
 </a>
 
-<a href="/interventions/" class="section-card">
+<a href="{{ '/interventions/' | url }}" class="section-card">
 <span class="section-card-icon">🎯</span>
 <h3>Interventions & Support</h3>
 <p>Evidence-based strategies, teaching approaches, and reasonable adjustments.</p>
 </a>
 
-<a href="/case-studies/" class="section-card">
+<a href="{{ '/case-studies/' | url }}" class="section-card">
 <span class="section-card-icon">📚</span>
 <h3>Case Studies</h3>
 <p>Practical examples of successful identification and intervention.</p>
 </a>
 
-<a href="/resources/" class="section-card">
+<a href="{{ '/resources/' | url }}" class="section-card">
 <span class="section-card-icon">🛠️</span>
 <h3>Resources & Tools</h3>
 <p>Assessment tools, training materials, templates, and practical resources.</p>
 </a>
 
-<a href="/feedback/" class="section-card">
+<a href="{{ '/feedback/' | url }}" class="section-card">
 <span class="section-card-icon">💬</span>
 <h3>Stakeholder Feedback</h3>
 <p>Input from staff, parents, students, and external partners.</p>
 </a>
 
-<a href="/changelog/" class="section-card">
+<a href="{{ '/changelog/' | url }}" class="section-card">
 <span class="section-card-icon">📝</span>
 <h3>Change Log</h3>
 <p>Version history and policy update tracking.</p>
 </a>
 
-<a href="/help/" class="section-card">
+<a href="{{ '/help/' | url }}" class="section-card">
 <span class="section-card-icon">❓</span>
 <h3>Help & FAQs</h3>
 <p>Guidance and answers to common questions.</p>

@@ -2,11 +2,11 @@
     <div class="container">
         <div class="header-content">
             <div class="site-branding">
-                <a href="/" class="site-logo-link" aria-label="{{ site.organization }} home">
-                    <img src="/assets/twt-logo.svg" alt="{{ site.organization }} logo" class="site-logo">
+                <a href="{{ '/' | url }}" class="site-logo-link" aria-label="{{ site.organization }} home">
+                    <img src="{{ '/assets/twt-logo.svg' | url }}" alt="{{ site.organization }} logo" class="site-logo">
                 </a>
                 <h1 class="site-title">
-                    <a href="/">{{ site.name }}</a>
+                    <a href="{{ '/' | url }}">{{ site.name }}</a>
                 </h1>
             </div>
             

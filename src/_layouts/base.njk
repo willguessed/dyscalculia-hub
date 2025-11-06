@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/search.css">
+    <link rel="icon" href="{{ '/assets/favicon.ico' | url }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/search.css' | url }}">
 </head>
 <body>
     {% include "header.njk" %}
@@ -32,15 +32,19 @@
                     <div class="policy-item">
                         <h3>📋 Parent Information Sheet</h3>
                         <p>Comprehensive guide for parents about dyscalculia identification and support.</p>
-                        <a href="/policies/parent-info-sheet.html" target="_blank" class="btn-primary">View Document</a>
+                        <a href="{{ '/policies/parent-info-sheet.html' | url }}" target="_blank" class="btn-primary">View Document</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <script src="/js/vendor/lunr.js"></script>
-    <script src="/js/search.js"></script>
-    <script src="/js/filters.js"></script>
+    <script>
+        window.__SITE_PREFIX = "{{ '/' | url }}";
+        window.__SEARCH_INDEX_URL = "{{ '/search-index.json' | url }}";
+    </script>
+    <script src="{{ '/js/vendor/lunr.js' | url }}"></script>
+    <script src="{{ '/js/search.js' | url }}"></script>
+    <script src="{{ '/js/filters.js' | url }}"></script>
 </body>
 </html>
