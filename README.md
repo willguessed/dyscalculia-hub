@@ -1,6 +1,6 @@
 # Dyscalculia Knowledge Repository & Policy Generator
 
-A dynamic, searchable HTML-based information repository for dyscalculia provision, enabling the Ted Wragg Trust to manage educational knowledge and generate policy documents.
+A dynamic, searchable HTML-based information repository for dyscalculia provision, enabling the Trust to manage educational knowledge and generate policy documents.
 
 ## Quick Start
 
