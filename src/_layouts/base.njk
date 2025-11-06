@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/search.css' | url }}">
 </head>
-<body>
+<body data-site-prefix="{{ '/' | url }}" data-search-index="{{ '/search-index.json' | url }}">
     {% include "header.njk" %}
     {% include "nav.njk" %}
     
@@ -39,10 +39,6 @@
         </div>
     </div>
     
-    <script>
-        window.__SITE_PREFIX = "{{ '/' | url }}";
-        window.__SEARCH_INDEX_URL = "{{ '/search-index.json' | url }}";
-    </script>
     <script src="{{ '/js/vendor/lunr.js' | url }}"></script>
     <script src="{{ '/js/search.js' | url }}"></script>
     <script src="{{ '/js/filters.js' | url }}"></script>

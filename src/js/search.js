@@ -2,6 +2,10 @@
 (function() {
   let searchIndex;
   let searchData = [];
+  const bodyEl = typeof document !== 'undefined' ? document.body : null;
+  const rawPrefix = bodyEl?.dataset.sitePrefix || '';
+  const searchIndexUrl = bodyEl?.dataset.searchIndex || '/search-index.json';
+  const sitePrefix = rawPrefix.replace(/\/$/, '');
   
   // Initialize search when DOM is ready
   if (document.readyState === 'loading') {
@@ -18,8 +22,7 @@
     
     // Load search index
     try {
-      const indexUrl = window.__SEARCH_INDEX_URL || '/search-index.json';
-      const response = await fetch(indexUrl);
+      const response = await fetch(searchIndexUrl);
       searchData = await response.json();
       
       // Build Lunr index
@@ -99,19 +102,13 @@
         help: 'Help & FAQs'
       };
 
-      const prefix = (window.__SITE_PREFIX || '/').replace(/\/$/, '');
       searchResults.innerHTML = resultDocs.map(doc => {
         const excerpt = getExcerpt(doc.content, query);
         const sectionLabel = sectionLabels[doc.section] || doc.section;
         let docUrl = doc.url || '#';
         if (!/^https?:\/\//i.test(docUrl)) {
-          if (prefix && docUrl.startsWith(prefix)) {
-            docUrl = docUrl;
-          } else if (docUrl.startsWith('/')) {
-            docUrl = `${prefix}${docUrl}`;
-          } else {
-            docUrl = `${prefix}/${docUrl}`;
-          }
+          const normalizedPath = docUrl.startsWith('/') ? docUrl : `/${docUrl}`;
+          docUrl = `${sitePrefix}${normalizedPath}`;
         }
         return `
           <a href="${docUrl}" class="search-result-item">

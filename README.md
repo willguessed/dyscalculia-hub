@@ -5,11 +5,19 @@ A dynamic, searchable HTML-based information repository for dyscalculia provisio
 ## Quick Start
 
 ```bash
+# Install dependencies
 npm install
+
+# Run the local dev server
 npm run dev
+
+# Build with GitHub Pages prefix
+npm run build:gh
 ```
 
-Visit `http://localhost:8080` to view the repository.
+- Visit `http://localhost:8080` during development.
+- Production build is published automatically to **GitHub Pages** at [`https://willguessed.github.io/dyscalculia-hub/`](https://willguessed.github.io/dyscalculia-hub/).
+
 
 ## Project Structure
 
@@ -34,10 +42,10 @@ Visit `http://localhost:8080` to view the repository.
 
 - **Structured Content**: 8 main sections with hierarchical organization
 - **Rich Metadata**: Tags for category, audience, evidence level, age range, status
-- **Full-Text Search**: Fast client-side search with filtering
+- **Full-Text Search**: Path-prefix aware Lunr.js search index
 - **Policy Generation**: Template-based document creation
-- **Version Control**: Git-based change tracking
-- **Governance Workflow**: Review and approval processes
+- **Automated Deployment**: GitHub Actions → GitHub Pages workflow
+- **Governance Workflow**: Review and approval processes (documented in dev logs)
 
 ## Commands
 
@@ -45,7 +53,7 @@ Visit `http://localhost:8080` to view the repository.
 - `npm run build` - Build production site
 - `npm run policy:generate` - Generate policy documents
 
-## Documentation
+## Documentation & Change History
 
 See `/dev-logs/` for:
 - Architecture decisions
@@ -53,6 +61,8 @@ See `/dev-logs/` for:
 - Metadata standards
 - Policy generation workflow
 - Governance processes
+
+See `/content/changelog/` for timestamped release notes. Latest entry: **2025-11-06 · Project Launched**.
 
 ## Technology Stack
 

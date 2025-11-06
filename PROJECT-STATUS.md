@@ -1,8 +1,8 @@
 # Project Status: Dyscalculia Knowledge Repository
 
-**Date**: November 5, 2025  
-**Status**: ✅ **CORE IMPLEMENTATION COMPLETE**  
-**Version**: 1.0
+**Date**: November 6, 2025  
+**Status**: ✅ **Live on GitHub Pages**  
+**Version**: 1.1
 
 ---
 
@@ -14,6 +14,8 @@
 - [x] Development server running (http://localhost:8080)
 - [x] Hot reload working
 - [x] Production build tested
+- [x] GitHub Actions → GitHub Pages deployment
+- [x] Path-prefix aware build (`npm run build:gh`)
 
 ### ✅ Content Management
 - [x] 8-section repository structure created
@@ -59,6 +61,8 @@
 - [x] Governance workflow
 - [x] Quick start guide
 - [x] Implementation summary
+- [x] README deployment instructions
+- [x] Changelog seeded (2025-11-06 Project Launch)
 
 ---
 
@@ -171,16 +175,16 @@ node tools/policy-generator.js --template templates/parent-info.yaml
    - School action plan
    - Staff training resource
 
-3. **User testing**:
+3. **User testing & Deployment Hardening**:
    - Train SENCO staff
    - Gather feedback
    - Refine UX
+   - Monitor GitHub Pages deployment logs
 
 ### Long Term (3-6 Months)
 1. **Production deployment**:
-   - Choose hosting (Netlify/Vercel/GitHub Pages)
-   - Set up CI/CD
-   - Configure domain
+   - Custom domain + HTTPS for GitHub Pages site
+   - Optional hosting redundancy
 
 2. **Ongoing governance**:
    - Monthly content reviews
