@@ -30,7 +30,7 @@ layout: base.njk
         <article class="section-entry">
             <div class="section-entry-content">
                 <h2 class="section-entry-title">
-                    <a href="{{ item.url }}" class="section-entry-link" data-section="{{ sectionId }}" data-section-title="{{ heading }}">{{ item.data.title }}</a>
+                    <a href="{{ item.url | url }}" class="section-entry-link" data-section="{{ sectionId }}" data-section-title="{{ heading }}">{{ item.data.title }}</a>
                 </h2>
                 {% set rawSummary = item.templateContent | striptags | trim %}
                 {% if rawSummary %}
@@ -49,7 +49,7 @@ layout: base.njk
                     <div class="meta-item"><strong>Reviewed:</strong> {{ item.data.lastReviewed | readableDate }}</div>
                     {% endif %}
                 </div>
-                <a class="section-entry-readmore btn-primary section-entry-link" href="{{ item.url }}" data-section="{{ sectionId }}" data-section-title="{{ heading }}">View Full Article →</a>
+                <a class="section-entry-readmore btn-primary section-entry-link" href="{{ item.url | url }}" data-section="{{ sectionId }}" data-section-title="{{ heading }}">View Full Article →</a>
             </div>
         </article>
         {% endfor %}
