@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+    <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+    {% include "header.njk" %}
+    {% include "nav.njk" %}
+    
+    <main class="main-content">
+        {{ content | safe }}
+    </main>
+    
+    {% include "footer.njk" %}
+    
+    <!-- Policy Viewer Modal -->
+    <div class="modal" id="policy-modal" hidden>
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Policy Documents</h2>
+                <button class="modal-close" id="policy-modal-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="policy-list">
+                    <div class="policy-item">
+                        <h3>📋 Parent Information Sheet</h3>
+                        <p>Comprehensive guide for parents about dyscalculia identification and support.</p>
+                        <a href="/policies/parent-info-sheet.html" target="_blank" class="btn-primary">View Document</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/vendor/lunr.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/filters.js"></script>
+</body>
+</html>

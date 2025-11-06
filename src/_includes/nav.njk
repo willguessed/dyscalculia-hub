@@ -1,0 +1,87 @@
+<nav class="site-nav collapsed" id="site-nav">
+    <div class="container">
+        <div class="nav-panel" id="site-nav-panel">
+        <ul class="nav-list">
+            {% for section in site.sections %}
+            <li class="nav-item">
+                <a href="/{{ section.id }}/" class="nav-link">
+                    <span class="nav-icon">{{ section.icon }}</span>
+                    <div class="nav-content">
+                        <span class="nav-label">{{ section.title }}</span>
+                        <span class="nav-description">{{ section.description }}</span>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        
+        <div class="nav-secondary">
+            <h3>Quick Links</h3>
+            <ul class="quick-links">
+                <li><a href="#" id="policy-viewer-link">📄 View Policy Documents</a></li>
+                <li><a href="/submit/">➕ Submit Content</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</nav>
+
+<aside class="filter-panel" id="filter-panel" hidden>
+    <div class="filter-container">
+        <div class="filter-header">
+            <h2>Filter Content</h2>
+            <button class="filter-close" id="filter-close" aria-label="Close filters">✕</button>
+        </div>
+        
+        <div class="filter-section">
+            <h3>Audience</h3>
+            <div class="filter-options">
+                {% for audience in site.audienceTypes %}
+                <label class="filter-option">
+                    <input type="checkbox" name="audience" value="{{ audience }}">
+                    <span>{{ audience }}</span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h3>Evidence Level</h3>
+            <div class="filter-options">
+                {% for level in site.evidenceLevels %}
+                <label class="filter-option">
+                    <input type="checkbox" name="evidenceLevel" value="{{ level.id }}">
+                    <span>{{ level.label }}</span>
+                </label>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h3>Age Range</h3>
+            <div class="filter-options">
+                <label class="filter-option">
+                    <input type="checkbox" name="ageRange" value="early-years">
+                    <span>Early Years (3-5)</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="ageRange" value="primary">
+                    <span>Primary (5-11)</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="ageRange" value="secondary">
+                    <span>Secondary (11-16)</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="ageRange" value="post-16">
+                    <span>Post-16</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="filter-actions">
+            <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+            <button class="btn btn-secondary" id="clear-filters">Clear All</button>
+        </div>
+    </div>
+</aside>

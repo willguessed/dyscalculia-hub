@@ -1,0 +1,78 @@
+{
+  "name": "Dyscalculia Hub",
+  "description": "Dynamic information repository and policy generation system for dyscalculia provision",
+  "organization": "Ted Wragg Trust",
+  "url": "https://dyscalculia-repo.tedwragg.org",
+  "sections": [
+    {
+      "id": "legal",
+      "title": "Legal & Policy Framework",
+      "description": "Statutory requirements, guidance documents, and legal obligations",
+      "icon": "⚖️"
+    },
+    {
+      "id": "knowledge",
+      "title": "Dyscalculia Knowledge Base",
+      "description": "Definitions, characteristics, neuroscience, and research",
+      "icon": "🧠"
+    },
+    {
+      "id": "assessment",
+      "title": "Assessment Procedures",
+      "description": "Three-tier identification and assessment framework",
+      "icon": "📋"
+    },
+    {
+      "id": "interventions",
+      "title": "Interventions & Support",
+      "description": "Evidence-based strategies and classroom adaptations",
+      "icon": "🎯"
+    },
+    {
+      "id": "case-studies",
+      "title": "Case Studies",
+      "description": "Practical examples and success stories",
+      "icon": "📚"
+    },
+    {
+      "id": "resources",
+      "title": "Resources & Tools",
+      "description": "Practical materials and templates",
+      "icon": "🛠️"
+    },
+    {
+      "id": "feedback",
+      "title": "Stakeholder Feedback",
+      "description": "Input from staff, parents, students, and partners",
+      "icon": "💬"
+    },
+    {
+      "id": "changelog",
+      "title": "Change Log",
+      "description": "Version history and policy updates",
+      "icon": "📝"
+    },
+    {
+      "id": "help",
+      "title": "Help & FAQs",
+      "description": "Guidance and answers to common questions",
+      "icon": "❓"
+    }
+  ],
+  "audienceTypes": [
+    "SENCO",
+    "Teacher",
+    "TA",
+    "Parent",
+    "Student",
+    "Governor",
+    "Leadership"
+  ],
+  "evidenceLevels": [
+    { "id": "statutory", "label": "Statutory Requirement", "badge": "required" },
+    { "id": "high-quality", "label": "High-Quality Evidence", "badge": "strong" },
+    { "id": "good-practice", "label": "Good Practice", "badge": "good" },
+    { "id": "emerging-practice", "label": "Emerging Practice", "badge": "emerging" },
+    { "id": "context-specific", "label": "Context-Specific", "badge": "specific" }
+  ]
+}

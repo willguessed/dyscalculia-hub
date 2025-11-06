@@ -1,0 +1,161 @@
+template:
+  name: "Dyscalculia Parent Information Sheet"
+  version: "1.0"
+  audience: ["Parent", "Carer"]
+  outputFormat: ["html", "pdf"]
+
+structure:
+  - section:
+      title: "What is Dyscalculia?"
+      query:
+        category: "knowledge"
+        tags: ["definition", "characteristics"]
+        evidenceLevel: ["high-quality", "good-practice"]
+        limit: 1
+      display:
+        format: "summary"
+        includeMetadata: false
+
+  - section:
+      title: "How We Identify Dyscalculia"
+      subsections:
+        - subsection:
+            title: "First Steps (Tier 1)"
+            query:
+              category: "assessment"
+              tier: "tier1"
+              tags: ["identification"]
+              limit: 1
+        - subsection:
+            title: "Specialist Assessment (Tier 2)"
+            query:
+              category: "assessment"
+              tier: "tier2"
+              limit: 1
+        - subsection:
+            title: "Comprehensive Assessment (Tier 3)"
+            query:
+              category: "assessment"
+              tier: "tier3"
+              limit: 1
+
+  - section:
+      title: "How We Support Children with Dyscalculia"
+      query:
+        category: "intervention"
+        evidenceLevel: ["high-quality", "good-practice"]
+        tags: ["evidence-based"]
+        limit: 5
+      display:
+        format: "summary"
+        includeMetadata: false
+
+  - section:
+      title: "Success Stories"
+      query:
+        category: "case-study"
+        tags: ["success-story", "intervention-success"]
+        limit: 2
+      display:
+        format: "summary"
+        includeMetadata: false
+
+  - section:
+      title: "How You Can Help at Home"
+      type: "static"
+      content: |
+        Supporting your child at home can make a real difference. Here are some practical strategies:
+
+        ### Build Confidence
+        - Celebrate effort, not just correct answers
+        - Avoid time pressure for calculations
+        - Emphasize that everyone learns differently
+        - Share stories of successful people who struggled with maths
+
+        ### Use Concrete Materials
+        - Use real objects (toys, coins, buttons) for counting and calculations
+        - Play board games that involve counting and number recognition
+        - Bake together - measuring, fractions, time
+        - Use money in real shopping situations
+
+        ### Practice Little and Often
+        - 10-15 minutes daily is better than one long session
+        - Make it fun and low-pressure
+        - Use games and apps designed for dyscalculia
+        - Focus on understanding, not speed
+
+        ### Support Number Sense
+        - Estimate quantities (how many sweets in the jar?)
+        - Compare sizes (which is bigger?)
+        - Count in different ways (forwards, backwards, in 2s, 5s, 10s)
+        - Use number lines for visual support
+
+        ### Reduce Anxiety
+        - Never say "I was bad at maths too" - this reinforces negativity
+        - Avoid showing your own anxiety about mathematics
+        - Praise perseverance and problem-solving strategies
+        - Remind them that struggle is part of learning
+
+        ### Work with School
+        - Attend meetings and share observations
+        - Ask questions if you don't understand something
+        - Implement strategies consistently at home
+        - Communicate what works and what doesn't
+
+  - section:
+      title: "Frequently Asked Questions"
+      type: "static"
+      content: |
+        **Q: Will my child grow out of dyscalculia?**  
+        A: Dyscalculia is a lifelong condition, but with appropriate support, individuals can develop effective strategies and achieve their potential. Early identification and intervention make a significant difference.
+
+        **Q: Does dyscalculia mean my child has low intelligence?**  
+        A: No. Dyscalculia is a specific difficulty with numbers and is not related to general intelligence. Many children with dyscalculia have average or above-average intelligence.
+
+        **Q: Can my child still study STEM subjects?**  
+        A: Yes, with appropriate support and adjustments. Many successful scientists, engineers, and mathematicians have dyscalculia. Understanding concepts is possible even if calculation remains challenging.
+
+        **Q: Will my child get extra time in exams?**  
+        A: If dyscalculia significantly impacts access to assessments, reasonable adjustments such as extra time, use of calculators, or alternative recording methods may be appropriate.
+
+        **Q: Is there a cure for dyscalculia?**  
+        A: There is no "cure," but evidence-based interventions can help children develop mathematical skills and strategies to manage difficulties effectively.
+
+        **Q: Should I hire a private tutor?**  
+        A: A tutor trained in dyscalculia-friendly approaches can be beneficial. However, ensure they understand dyscalculia and use multi-sensory, concrete methods rather than just more practice of traditional methods.
+
+  - section:
+      title: "Where to Get More Information"
+      type: "static"
+      content: |
+        ### Within School
+        - Your child's class teacher
+        - School SENCO (Special Educational Needs Coordinator)
+        - Mathematics Lead
+
+        ### Trust Level
+        - MAT SEND Lead: [Contact details]
+        - Repository Administrator: [Contact details]
+
+        ### External Organizations
+        - **British Dyslexia Association (BDA)** - Dyscalculia information  
+          [https://www.bdadyslexia.org.uk/dyscalculia](https://www.bdadyslexia.org.uk/dyscalculia)
+
+        - **The Dyscalculia Network**  
+          [https://www.dyscalculia.me.uk](https://www.dyscalculia.me.uk)
+
+        - **Ronit Bird - Dyscalculia Specialist**  
+          [https://www.ronitbird.com](https://www.ronitbird.com)
+
+        - **Steve Chinn - Dyscalculia Resources**  
+          [https://stevechinn.co.uk](https://stevechinn.co.uk)
+
+        ### Recommended Reading for Parents
+        - *The Dyscalculia Toolkit* by Ronit Bird
+        - *Maths for the Dyslexic and Dyscalculic* by Anne Henderson
+        - *What to Do When You Can't Do Maths* by Steve Chinn
+
+footer:
+  includeChangelog: false
+  includeReferences: true
+  approvalSection: false

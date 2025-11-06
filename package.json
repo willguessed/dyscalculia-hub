@@ -1,0 +1,23 @@
+{
+  "name": "dyscalculia-knowledge-repository",
+  "version": "1.0.0",
+  "description": "Dynamic HTML Information Repository and Policy Generation System for dyscalculia provision",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "policy:generate": "node tools/policy-generator.js"
+  },
+  "keywords": ["dyscalculia", "education", "SEND", "policy", "knowledge-base"],
+  "author": "Ted Wragg Trust",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  },
+  "dependencies": {
+    "lunr": "^2.3.9",
+    "markdown-it": "^14.0.0",
+    "yaml": "^2.3.4"
+  }
+}
