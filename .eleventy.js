@@ -113,6 +113,28 @@ module.exports = function(eleventyConfig) {
     return JSON.stringify(allContent);
   });
 
+  // Add search index collection
+  eleventyConfig.addCollection("searchIndex", function(collectionApi) {
+    const allContent = [];
+    
+    ['legal', 'knowledge', 'assessment', 'interventions', 'caseStudies', 'resources', 'feedback', 'changelog', 'help'].forEach(key => {
+      const items = collectionApi.getFilteredByGlob(`content/${key}/**/*.md`);
+      items.forEach(item => {
+        allContent.push({
+          title: item.data.title,
+          content: item.template.frontMatter.content,
+          url: item.url,
+          tags: item.data.tags || [],
+          category: item.data.category || '',
+          audience: item.data.audience || [],
+          section: key
+        });
+      });
+    });
+    
+    return allContent;
+  });
+
   return {
     dir: {
       input: "content",
