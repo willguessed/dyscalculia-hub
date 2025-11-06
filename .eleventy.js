@@ -1,6 +1,9 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
+  // GitHub Pages configuration
+  const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "";
+  
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -120,6 +123,7 @@ module.exports = function(eleventyConfig) {
     },
     templateFormats: ["md", "njk", "html"],
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
+    pathPrefix: pathPrefix
   };
 };
